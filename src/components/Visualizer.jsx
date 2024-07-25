@@ -26,7 +26,7 @@ const Visualizer = () => {
       setLogMessages([`Original array = ${JSON.stringify(data)}`]);
       moves.forEach((move, index) => {
         setTimeout(() => {
-          setLogMessages((prev) => [...prev, `Swapped elements at indices ${move.index1} and ${move.index2}`]);
+          setLogMessages((prev) => [...prev, `Swap ${move.index1} and ${move.index2}`]);
           updateChart(move.index1, move.index2);
         }, index * speed);
       });
