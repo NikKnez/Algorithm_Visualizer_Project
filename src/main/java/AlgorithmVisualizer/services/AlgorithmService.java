@@ -1,35 +1,29 @@
 package AlgorithmVisualizer.services;
 
-import AlgorithmVisualizer.models.Algorithm;
-import AlgorithmVisualizer.models.BubbleSortAlgorithm;
-import AlgorithmVisualizer.models.QuickSortAlgorithm;
-import AlgorithmVisualizer.repositories.AlgorithmRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import AlgorithmVisualizer.models.*;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class AlgorithmService {
 
-    @Autowired
-    private AlgorithmRepository algorithmRepository;
+    private final Map<String, SortingAlgorithm> algorithms = new HashMap<>();
 
-    public List<Algorithm> getAllAlgorithms() {
-        return algorithmRepository.findAll();
+    public AlgorithmService() {
+        algorithms.put("bubbleSort", new BubbleSort());
+        //algorithms.put("insertionSort", new InsertionSort());
+        // algorithms.put("selectionSort", new SelectionSort());
+        // Add more algorithms as needed
     }
 
-    public Algorithm getAlgorithmById(String id) {
-        return algorithmRepository.findById(id).orElse(null);
-    }
-
-    public Algorithm saveAlgorithm(Algorithm algorithm) {
-        return algorithmRepository.save(algorithm);
-    }
-
-    public void deleteAlgorithm(String id) {
-        algorithmRepository.deleteById(id);
+    public SortResponse sort(String algorithmName, List<Integer> array) {
+        SortingAlgorithm algorithm = algorithms.get(algorithmName);
+        if (algorithm == null) {
+            throw new IllegalArgumentException("Algorithm not found: " + algorithmName);
+        }
+        return algorithm.sort(array);
     }
 }
-
