@@ -1,10 +1,9 @@
-// src/App.js
 import React from 'react';
 import Navbar from './components/Navbar';
 import Visualizer from './components/Visualizer';
 
 const App = () => (
-  <div>
+  <div className="container">
     <Navbar />
     <Visualizer />
   </div>
