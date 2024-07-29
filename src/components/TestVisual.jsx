@@ -72,7 +72,7 @@ const Visualizer = () => {
   };
 
   const generateRandomArray = () => {
-    const arr = Array.from({ length: 15 }, () => Math.floor(Math.random() * 100));
+    const arr = [11, 15, 3, 2, 18, 13, 18, 6, 2, 17, 12, 11, 20, 3, 20];
     setData(arr);
   };
 
