@@ -1,5 +1,7 @@
 package AlgorithmVisualizer.services;
 
+import AlgorithmVisualizer.algorithms.BubbleSort;
+import AlgorithmVisualizer.algorithms.InsertionSort;
 import AlgorithmVisualizer.models.*;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,7 @@ public class AlgorithmService {
 
     public AlgorithmService() {
         algorithms.put("bubbleSort", new BubbleSort());
-        //algorithms.put("insertionSort", new InsertionSort());
+        algorithms.put("insertionSort", new InsertionSort());
         // algorithms.put("selectionSort", new SelectionSort());
         // Add more algorithms as needed
     }

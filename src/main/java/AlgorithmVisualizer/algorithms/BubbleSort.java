@@ -1,4 +1,8 @@
-package AlgorithmVisualizer.models;
+package AlgorithmVisualizer.algorithms;
+
+import AlgorithmVisualizer.models.Move;
+import AlgorithmVisualizer.models.SortResponse;
+import AlgorithmVisualizer.models.SortingAlgorithm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,4 +32,5 @@ public class BubbleSort implements SortingAlgorithm {
         response.setSortedArray(new ArrayList<>(array));
         return response;
     }
+
 }
