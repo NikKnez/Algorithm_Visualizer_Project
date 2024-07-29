@@ -59,11 +59,12 @@ const Visualizer = () => {
     const move = savedMovesRef.current[currentStepRef.current];
     setTimeout(() => {
       if (!isSortingRef.current) return; // Check if sorting has been paused or stopped
-      //setLogMessages((prev) => [...prev, `Swap ${move.index1} and ${move.index2}`]);
       if (algorithm === 'insertionSort') {
         setLogMessages((prev) => [...prev, `Insert ${data[move.index2]}`]);
-      } else {
+      } else if (algorithm === 'bubbleSort') {
         setLogMessages((prev) => [...prev, `Swap ${data[move.index2]} and ${data[move.index1]}`]);
+      } else {
+        setLogMessages((prev) => [...prev]);
       }
       updateChart(move.index1, move.index2);
       currentStepRef.current += 1;
@@ -72,7 +73,7 @@ const Visualizer = () => {
   };
 
   const generateRandomArray = () => {
-    const arr = Array.from({ length: 15 }, () => Math.floor(Math.random() * 100));
+    const arr = Array.from({ length: 15 }, () => Math.floor(Math.random() * 30));
     setData(arr);
   };
 
@@ -167,6 +168,8 @@ const Visualizer = () => {
           <option value="bubbleSort">Bubble Sort</option>
           <option value="insertionSort">Insertion Sort</option>
           <option value="selectionSort">Selection Sort</option>
+          <option value="combSort">Comb Sort</option>
+          <option value="quickSort">Quick Sort</option>
           {/* Add more algorithms here */}
         </select>
       </div>
