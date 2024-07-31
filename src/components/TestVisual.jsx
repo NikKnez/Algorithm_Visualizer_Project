@@ -170,6 +170,7 @@ const Visualizer = () => {
           <option value="selectionSort">Selection Sort</option>
           <option value="combSort">Comb Sort</option>
           <option value="quickSort">Quick Sort</option>
+          <option value="BST">Binary Search Tree</option>
           {/* Add more algorithms here */}
         </select>
       </div>
