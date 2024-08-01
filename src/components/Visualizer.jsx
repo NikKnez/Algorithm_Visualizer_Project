@@ -9,6 +9,7 @@ Chart.register(...registerables);
 
 const Visualizer = () => {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [moves, setMoves] = useState([]);
   const [algorithm, setAlgorithm] = useState('');
   const [speed, setSpeed] = useState(500); // in milliseconds

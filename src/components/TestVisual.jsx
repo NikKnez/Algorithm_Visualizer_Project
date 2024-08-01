@@ -9,6 +9,7 @@ Chart.register(...registerables);
 
 const Visualizer = () => {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [moves, setMoves] = useState([]);
   const [algorithm, setAlgorithm] = useState('');
   const [speed, setSpeed] = useState(500); // in milliseconds
@@ -170,7 +171,6 @@ const Visualizer = () => {
           <option value="selectionSort">Selection Sort</option>
           <option value="combSort">Comb Sort</option>
           <option value="quickSort">Quick Sort</option>
-          <option value="BST">Binary Search Tree</option>
           {/* Add more algorithms here */}
         </select>
       </div>
