@@ -19,6 +19,7 @@ public class AlgorithmService {
         algorithms.put("selectionSort", new SelectionSort());
         algorithms.put("combSort", new CombSort());
         algorithms.put("quickSort", new QuickSort());
+        //algorithms.put("binarySearchTree", new BinarySearchTree());
         // Add more algorithms as needed
     }
 
