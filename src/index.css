@@ -18,7 +18,7 @@ nav h1 {
 
 /* Button styles */
 button {
-  margin: 0.5em; /* Reduced margin for better fit */
+  margin: 0.5em;
   padding: 0.5em 1em;
   border: none;
   border-radius: 3px;
@@ -52,7 +52,7 @@ button.resume-button {
   background-color: #f1f1f1;
   padding: 10px;
   margin-top: 10px;
-  height: 120px; /* Reduced height */
+  height: 120px;
   overflow-y: auto;
   border: 1px solid #ccc;
   width: 100%;
@@ -64,28 +64,28 @@ button.resume-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5em; /* Reduced padding */
+  padding: 0.5em;
   box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 .visualizer-container canvas {
-  max-width: 100%;
-  height: 150px; /* Adjusted height */
-  margin-bottom: 1em;
+  max-width: 85%;
+  height: 100px; 
+  margin-bottom: 0.5em;
 }
 
 /* Adjust button group styles */
 .button-group {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping if needed */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5em; /* Adjusted gap */
+  gap: 0.5em;
 }
 
 .action-buttons {
   display: flex;
-  gap: 0.5em; /* Adjusted gap */
-  margin: 1em 0; /* Adjusted margin */
+  gap: 0.5em;
+  margin: 1em 0;
 }
 
 /* Algorithm explanation styles */
@@ -97,12 +97,12 @@ button.resume-button {
   border-radius: 5px;
   background-color: #f9f9f9;
   color: #333;
-  font-size: 14px; /* Smaller font size */
+  font-size: 14px;
 }
 
 .algorithm-explanation h2 {
   margin-top: 0;
-  font-size: 18px; /* Smaller heading size */
+  font-size: 18px;
 }
 
 .algorithm-explanation table {
@@ -122,6 +122,41 @@ button.resume-button {
   background-color: #f2f2f2;
 }
 
+/* 1D Array Tracer styles */
+.array1d-tracer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.array-cell-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.index {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.array-cell {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.value {
+  font-size: 1.2em;
+}
+
+/* Highlight styles */
+.array-cell.highlight {
+  background-color: turquoise;
+}
+
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   .visualizer-container {
@@ -129,7 +164,7 @@ button.resume-button {
   }
 
   .visualizer-container canvas {
-    height: 120px; /* Adjust canvas height for smaller screens */
+    height: 80px; /* Adjust canvas height for smaller screens */
   }
 
   .console {
