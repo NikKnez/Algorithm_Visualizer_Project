@@ -1,5 +1,7 @@
 package AlgorithmVisualizer.controllers;
 
+import AlgorithmVisualizer.models.SearchRequest;
+import AlgorithmVisualizer.models.SearchResponse;
 import AlgorithmVisualizer.models.SortResponse;
 import AlgorithmVisualizer.services.AlgorithmService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +21,15 @@ public class AlgorithmController {
         this.algorithmService = algorithmService;
     }
 
-    @PostMapping("/{algorithmName}")
+    @PostMapping("/{algorithmName}/sort")
     public ResponseEntity<SortResponse> sort(@PathVariable String algorithmName, @RequestBody List<Integer> array) {
         SortResponse response = algorithmService.sort(algorithmName, array);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/{algorithmName}/search")
+    public ResponseEntity<SearchResponse> search(@PathVariable String algorithmName, @RequestBody SearchRequest request) {
+        SearchResponse response = algorithmService.search(algorithmName, request.getArray(), request.getTarget());
         return ResponseEntity.ok(response);
     }
 }
