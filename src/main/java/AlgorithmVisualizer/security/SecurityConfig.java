@@ -36,7 +36,7 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOriginPatterns(List.of("http://localhost:3000"));
+        config.setAllowedOriginPatterns(List.of("https://algvisual.netlify.app"));
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.addExposedHeader("Content-Disposition");
