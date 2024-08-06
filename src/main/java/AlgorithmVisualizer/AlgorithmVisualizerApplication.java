@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
-@ComponentScan(basePackages = {"AlgorithmVisualizer"})
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+//@ComponentScan({"java.AlgorithmVisualizer"})
 public class AlgorithmVisualizerApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
