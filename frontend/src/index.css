@@ -1,0 +1,182 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #282c34;
+  padding: 1em;
+  color: white;
+  text-align: center;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+/* Button styles */
+button {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Default button colors */
+button {
+  background-color: #61dafb;
+}
+
+button.reset-button {
+  background-color: #95a5a6; /* Gray */
+}
+
+button.pause-button {
+  background-color: #f39c12; /* Orange */
+}
+
+button.resume-button {
+  background-color: #2ecc71; /* Green */
+}
+
+/* Console styles */
+.console {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  height: 120px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Visualizer styles */
+.visualizer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.visualizer-container canvas {
+  max-width: 85%;
+  height: 100px; 
+  margin-bottom: 0.5em;
+}
+
+/* Adjust button group styles */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+/* Algorithm explanation styles */
+.algorithm-explanation {
+  width: 80%;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+}
+
+.algorithm-explanation h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.algorithm-explanation table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.algorithm-explanation th,
+.algorithm-explanation td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.algorithm-explanation th {
+  background-color: #f2f2f2;
+}
+
+/* 1D Array Tracer styles */
+.array1d-tracer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.array-cell-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.index {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.array-cell {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.value {
+  font-size: 1.2em;
+}
+
+/* Highlight styles */
+.array-cell.highlight {
+  background-color: turquoise;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .visualizer-container {
+    padding: 0.5em; /* Ensure padding is consistent */
+  }
+
+  .visualizer-container canvas {
+    height: 80px; /* Adjust canvas height for smaller screens */
+  }
+
+  .console {
+    height: 100px; /* Adjust console height for smaller screens */
+  }
+
+  .button-group, .action-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 0.5em;
+  }
+
+  .algorithm-explanation {
+    width: 100%;
+  }
+}
