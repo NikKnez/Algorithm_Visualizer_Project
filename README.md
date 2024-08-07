@@ -37,7 +37,8 @@ Algorithm Visualizer is an interactive web application designed to help users un
 
 ## 📷 Screenshots
 
-🌐 Live Demo
+## 🌐 Live Demo
+
 [Check out the live demo](https://algvisual.netlify.app) of the Algorithm Visualizer.
 
 
