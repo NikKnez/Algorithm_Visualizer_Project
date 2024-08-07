@@ -12,6 +12,7 @@ Algorithm Visualizer is an interactive web application designed to help users un
 #### 💻 Technologies
 - Frontend: React
 - Backend: Spring Boot, Maven
+- Development Tools: IntelliJ IDEA for backend, Visual Studio Code for frontend
 
 ## 🚀 Getting Started
 #### Prerequisites
@@ -36,10 +37,21 @@ Algorithm Visualizer is an interactive web application designed to help users un
 
 ## 📷 Screenshots
 
+🌐 Live Demo
+[Check out the live demo](https://algvisual.netlify.app) of the Algorithm Visualizer.
+
+
+## 📦 Future Enhancements
+-	More Algorithms: Adding support for additional algorithms like Merge Sort, Dijkstra's Algorithm, etc.
+- Improved UI: Enhancing the visual and interactive aspects of the application.
+- User Contributions: Allowing users to submit and share their own algorithms.
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request for any enhancements or bug fixes.
+
+##📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 **Developed by [NikKnez](https://github.com/NikKnez)**
